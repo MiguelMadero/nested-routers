@@ -1,3 +1,13 @@
 <h2 id='title'>Application.hbs</h2>
 
+<div class="col-sm-4">
+  <ul>
+    {{link-to "All" "products.all" tagName="li"}}
+    {{link-to "List 1" "products.list" "list1" tagName="li"}}
+    {{link-to "List 2" "products.list" "list2" tagName="li"}}
+    {{link-to "List 3" "products.list" "list3" tagName="li"}}
+</div>
+
+<div class="col-sm-8">
 {{outlet}}
+</div>
