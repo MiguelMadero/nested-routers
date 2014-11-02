@@ -12,12 +12,23 @@ Router.map(function() {
     this.route('all', {path: '/all'});
     this.route('list', {path: '/:listId'});
   });
+});
 
-  // TODO: move to listsRouter
+// Would go on a separate file, but left here to make it easier to compare with main:router
+/**
+ * A ChildRouter delegates to its parentRouter (injected by the container) if the route isn't present
+ */
+var ChildRouter = Ember.Router.extend({
+  // TODO: override trasitionTo, et.al to delegate to parentRouter
+});
+var ListsRouter = ChildRouter.extend();
+ListsRouter.map(function () {
   this.resource('lists', function () {
     this.route('new');
     this.route('edit', {path: ':listId'});
-  })
+  });
 });
 
+
 export default Router;
+export { ListsRouter };
