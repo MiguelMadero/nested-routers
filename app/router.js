@@ -12,6 +12,12 @@ Router.map(function() {
     this.route('all', {path: '/all'});
     this.route('list', {path: '/:listId'});
   });
+
+  // TODO: move to listsRouter
+  this.resource('lists', function () {
+    this.route('new');
+    this.route('edit', {path: ':listId'});
+  })
 });
 
 export default Router;
