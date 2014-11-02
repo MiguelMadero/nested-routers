@@ -6,8 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-
-  this.route('products');
+  this.resource('products', function () {
+    this.route('all', {path: '/all'});
+    this.route('list', {path: '/:listId'});
+  });
 });
 
 export default Router;
