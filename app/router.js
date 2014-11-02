@@ -21,7 +21,11 @@ Router.map(function() {
  */
 var ChildRouter = Ember.Router.extend({
   // TODO: override trasitionTo, et.al to delegate to parentRouter
-  location: 'none'
+  location: 'none',
+  _lookupActiveView: function() {
+    return this._super.apply(this, arguments) ||
+      this.get('parentRouter')._lookupActiveView.apply(this.get('parentRouter'), arguments);
+  },
 });
 var ListsRouter = ChildRouter.extend();
 ListsRouter.map(function () {
