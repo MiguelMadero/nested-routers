@@ -1,0 +1,8 @@
+TODO:
+Seems like router.router.recognizer is shared across all instances of Ember.Router...
+  WTF, how would two different apps even work under the same domain?
+
+
+* Seems like we need to set the router on views, it currently gets router:main explicitly. See /Users/mmadero/code/emberjs/ember.js/packages/ember-routing/lib/ext/view.js:64
+* {{link-to}} is doing something similar as above (see /Users/mmadero/code/emberjs/ember.js/packages/ember-routing-handlebars/lib/helpers/link_to.js:395)
+* Same for {{render}} (see /Users/mmadero/code/emberjs/ember.js/packages/ember-routing-handlebars/lib/helpers/render.js:96)

@@ -1,4 +1,4 @@
-import ListsRouter from '../router';
+import { ListsRouter } from '../router';
 
 export function initialize(container, application) {
   container.register('router:lists', ListsRouter);
@@ -14,6 +14,9 @@ export function initialize(container, application) {
   application.inject('controller:lists', 'target', 'router:lists');
   application.inject('controller:lists.new', 'target', 'router:lists');
   application.inject('controller:lists.edit', 'target', 'router:lists');
+
+  // TODO: consider moving this to app.ready (app.then or use evented, see http://stackoverflow.com/questions/18830483/catch-app-ready-event-outside-the-app)
+  container.lookup('router:lists').startRouting();
 }
 
 export default {
