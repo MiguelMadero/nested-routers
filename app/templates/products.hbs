@@ -1,13 +1,6 @@
 <div class="row">
   <div class="col-sm-4">
-    {{outlet 'lists'}}
-    <div class="list-group ">
-      <ul>
-        {{link-to "All" "products.all" tagName="li" class="list-group-item"}}
-        {{link-to "List 1" "products.list" "list1" tagName="li" class="list-group-item"}}
-        {{link-to "List 2" "products.list" "list2" tagName="li" class="list-group-item"}}
-        {{link-to "List 3" "products.list" "list3" tagName="li" class="list-group-item"}}
-    </div>
+    {{render 'lists'}}
   </div>
 
   <div class="col-sm-8">
