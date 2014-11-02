@@ -1,19 +1,10 @@
-# Nested-routers
+# Nested Routers (POC)
 
-This README outlines the details of collaborating on this Ember application.
-
-A short introduction of this app could easily go here.
-
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+This is a POC about how to use nested-routers in Ember.JS allowing use to have multiple 'active' sections each with its own state management, routes, controllers, etc. — Edit
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/MiguelMadero/nested-routers` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -21,11 +12,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember server`
-* Visit your app at http://localhost:4200.
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
 
@@ -39,13 +26,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+TODO
 
 ## Further Reading / Useful Links
 
-* ember: http://emberjs.com/
-* ember-cli: http://www.ember-cli.com/
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+* This concept was inspired by [this StackOverflow Question](http://stackoverflow.com/questions/20111301/different-ember-routes-or-displaying-two-complex-views-in-their-own-context)
+* [Discussion about this concept](http://discuss.emberjs.com/t/how-should-i-organize-multiple-controller-models-in-one-application/5054/6) on discuss
+* This app uses ember: http://emberjs.com/
+* Also the ember-cli: http://www.ember-cli.com/
