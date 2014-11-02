@@ -11,9 +11,9 @@ export function initialize(container, application) {
   application.inject('route:lists.new', 'router', 'router:lists');
   application.inject('route:lists.edit', 'router', 'router:lists');
 
-  application.inject('controller:lists', 'router', 'router:lists');
-  application.inject('controller:lists.new', 'router', 'router:lists');
-  application.inject('controller:lists.edit', 'router', 'router:lists');
+  application.inject('controller:lists', 'target', 'router:lists');
+  application.inject('controller:lists.new', 'target', 'router:lists');
+  application.inject('controller:lists.edit', 'target', 'router:lists');
 }
 
 export default {

@@ -12,6 +12,11 @@ Router.map(function() {
     this.route('all', {path: '/all'});
     this.route('list', {path: '/:listId'});
   });
+
+  this.resource('lists', function () {
+    this.route('new');
+    this.route('edit', {path: ':listId'});
+  });
 });
 
 // Would go on a separate file, but left here to make it easier to compare with main:router
@@ -20,13 +25,14 @@ Router.map(function() {
  */
 var ChildRouter = Ember.Router.extend({
   // TODO: override trasitionTo, et.al to delegate to parentRouter
+  location: 'none'
 });
 var ListsRouter = ChildRouter.extend();
 ListsRouter.map(function () {
-  this.resource('lists', function () {
-    this.route('new');
-    this.route('edit', {path: ':listId'});
-  });
+  // this.resource('lists', function () {
+  //   this.route('new');
+  //   this.route('edit', {path: ':listId'});
+  // });
 });
 
 
